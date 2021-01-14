@@ -1,0 +1,36 @@
+{
+  "name": "Red-DiscordBot",
+  "description": "A shitty & limited Heroku implementation",
+  "keywords": [
+    "discord",
+    "bot",
+    "red"
+  ],
+  "website": "https://cogs.red/",
+  "logo": "https://i.imgur.com/B470Uqu.png",
+  "env": {
+    "TOKEN": {
+      "description": "Discord Bot Token"
+    },
+    "PREFIX": {
+      "description": "The prefix with which you summon RedDiscord-Bot.",
+      "value": "~"
+    },
+    "OPTIONAL_ARGS": {
+      "description": "Optional arguments for advanced users. E.g. --load-cogs [LOAD_COGS [LOAD_COGS ...]] --owner 1234567890 --mentionable",
+      "value": "",
+      "required": false
+    }
+  },
+  "addons": [
+    "mongolab"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-java"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-python"
+    }
+  ]
+}
